@@ -34,6 +34,7 @@ gunzip gencode.v44.annotations.fa.gz
 ```bash
 git clone https://github.com/your-username/tpm-calculation.git
 cd tpm-calculation
+```
 # TPM Calculation from FASTQ (Salmon-based)
 
 This Bash script calculates Transcripts Per Million (TPM) from a **FASTQ** sequencing sample. The script can be used for both **single-end** and **paired-end** reads. It uses **Salmon** for transcript quantification and a **Python script** to aggregate TPM by gene.
