@@ -71,7 +71,7 @@ if [ ! -d "$INDEX_FOLDER" ] ||  [ -z "$(ls -A "$INDEX_FOLDER")" ]; then
 fi
 
 ## Take TPM per transcript
-if [[ ! -f "$FILE_2" ]]; then
+if [[ -f "$FILE_2" ]]; then
   salmon quant -p "$THREADS" -i "$INDEX_FOLDER" -l A -1 "$FILE_1" -2 "$FILE_2" -o "$OUTPUT_FOLDER" || exit_abnormal_code "Unable to quantify tpm" 3
 else
   salmon quant -p "$THREADS" -i "$INDEX_FOLDER" -l A -r "$FILE_1" -o "$OUTPUT_FOLDER" || exit_abnormal_code "Unable to quantify tpm" 3
