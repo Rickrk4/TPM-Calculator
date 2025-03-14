@@ -5,43 +5,6 @@ This Bash script calculates Transcripts Per Million (TPM) from a **FASTQ** seque
 ## Requirements
 
 1. **Salmon**: Must be installed and configured for transcript indexing.
-2. **Python**: The Python script `tpm_to_gene.py` is used for aggregating TPM by gene.
-3. **Input Files**:
-   - **FASTQ** files of the sample (single-end or paired-end).
-   - **GTF** annotation file (e.g., `gencode.v44.annotation.gtf`).
-   - **FASTA** file of transcripts (e.g., `gencode.v44.transcripts.fa`).
-4. **System tools**:
-   - **awk**, **tr** for file preprocessing.
-
-Annotiation and Transcript can be downloaded from any source (Gencode o Ensembl). This script was tested using Gencode files, they can be downloaded in this way:
-
-```bash
-wget ftp://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_44/gencode.v44.transcripts.fa.gz
-gunzip gencode.v44.transcripts.fa.gz
-```
-```bash
-wget ftp://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_44/gencode.v44.annotations.fa.gz
-gunzip gencode.v44.annotations.fa.gz
-
-```
-
-## Installation
-
-1. Ensure that **Salmon** and **Python** are installed.
-2. Download the required input files (FASTQ, GTF, FASTA of transcripts).
-3. Clone this repository (or download the script).
-
-```bash
-git clone https://github.com/your-username/tpm-calculation.git
-cd tpm-calculation
-```
-# TPM Calculation from FASTQ (Salmon-based)
-
-This Bash script calculates Transcripts Per Million (TPM) from a **FASTQ** sequencing sample. The script can be used for both **single-end** and **paired-end** reads. It uses **Salmon** for transcript quantification and a **Python script** to aggregate TPM by gene.
-
-## Requirements
-
-1. **Salmon**: Must be installed and configured for transcript indexing.
 2. **Python**: The Python script `tpm_to_gene.py` is used for aggregating TPM by gene. It must be placed in the same directory of this script.
 3. **Input Files**:
    - **FASTQ** files of the sample (single-end or paired-end).
